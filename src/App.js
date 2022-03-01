@@ -1,12 +1,14 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
-      navstart
-    <div className='content'>
+      <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+      <Navbar/>
+    <div className='content container mx-auto'>
     <Routes>
       <Route exact path="/" element={<Layout/>}>
         </Route>
@@ -16,7 +18,7 @@ function App() {
         </Route>
     </Routes>
     </div>
-      navend
+    </div>
     </BrowserRouter>
   );
 }
