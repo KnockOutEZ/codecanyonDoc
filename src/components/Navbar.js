@@ -1,9 +1,12 @@
 const Navbar = () => {
-  const open = false
+  var open = false
+  function openNav(){
+    open = !open
+  }
     return ( 
         <div>
             <div
-        onClick={open = false}
+        onClick={openNav}
         class="
           flex flex-col
           w-full
@@ -48,7 +51,7 @@ const Navbar = () => {
               rounded-lg
               focus:outline-none focus:shadow-outline
             "
-            onClick="open = !open"
+            onClick={openNav}
           >
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path
@@ -67,7 +70,7 @@ const Navbar = () => {
           </button>
         </div>
         <nav
-          className={"block: open, hidden: !open"}{open ? "block" : "hidden"}
+          className={open ? "block" : "hidden"}
           class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto"
         >
           <a
