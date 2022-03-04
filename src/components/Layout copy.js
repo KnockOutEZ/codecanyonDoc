@@ -2,14 +2,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState  } from "react";
 
 const Layout = () => {
-    // const id = '1PXA-tOul7WX3Q68xkeR5QZjH-y6ZaRHVqfC8RWycJN4';
-//   const gid = '0';
-//   const url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
-//   let docData = ""
-//   fetch(url)
-//   .then(response => response.text())
-//   .then(data => document.getElementById("json").innerHTML=data
-//   );
 
 const [data, setData] = useState();
 
