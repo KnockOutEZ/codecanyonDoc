@@ -25,7 +25,7 @@ body{
   }
   @media (min-width: 1200px) {
     .container {
-      max-width:1260px;
+      max-width:1200px;
       width:70% !important
     }
   }
@@ -67,4 +67,8 @@ body{
 
   .gradient {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  }
+
+  .hidden{
+    display:none !important;
   }

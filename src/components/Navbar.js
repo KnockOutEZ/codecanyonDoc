@@ -11,6 +11,7 @@ const Nav = styled.div`
   background: #fff;
   height: 80px;
   display: flex;
+  margin-right:100px;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -59,6 +60,7 @@ const Navbar = () => {
             <NavIcon to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
+            
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
