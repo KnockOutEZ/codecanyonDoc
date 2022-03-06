@@ -24,10 +24,9 @@ function App() {
   
 
   return (
-    
     <BrowserRouter>
       <Routes><Route exact path="/" element={<Main/>}></Route></Routes>
-      <div className={`${location=="true" ? "hidden" : ""}  md:flex flex-col md:flex-row md:min-h-screen w-full `}>
+      <div className={` ${location=="true" ? "hidden" : ""} md:flex flex-col md:flex-row md:min-h-screen w-full `}>
       <Navbar className={``}/>
     <div className='content container'>
     <Routes>
