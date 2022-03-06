@@ -60,7 +60,7 @@ const Navbar = () => {
             <NavIcon to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
-            
+            <Link to="/" style={{marginLeft:"16px",padding:"20px"}} class="text-2xl font-bold text-indigo-700">Venus </Link>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
