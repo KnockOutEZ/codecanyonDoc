@@ -1,6 +1,6 @@
 const Localhost = () => {
     return ( 
-        <div>
+        <div id="cpanel">
           <h3 className="">2. cPanel </h3>
           <br />
           <br />
