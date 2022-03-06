@@ -1,11 +1,11 @@
 const Localhost = () => {
     return ( 
         <div id="localhost">
-            <h3 clasName="">1. localhost</h3>
+            <h3 className="">1. localhost</h3>
           <br />
           <br />
           <div>
-            <p clasName="">
+            <p className="">
               <span>a.</span> You will need to install either Apache/Nginx web
               server on your system for Ubuntu. For Windows you can install
               XAMPP/WAMP web server. And for macOS please install MAMP. For to
