@@ -26,12 +26,13 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: #F4F4F5;
+  background: #fff;
   width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
   position: fixed;
+  border-right:1px solid #DBDBDB;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
@@ -43,7 +44,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -51,7 +52,7 @@ const Navbar = () => {
     <>
       <IconContext.Provider value={{ color: '#000' }}>
         <Nav>
-          <NavIcon to='#'>
+          <NavIcon to='#' style={{position:'fixed'}}>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
         </Nav>
