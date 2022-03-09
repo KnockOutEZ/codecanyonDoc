@@ -44,7 +44,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -52,7 +52,8 @@ const Navbar = () => {
     <>
       <IconContext.Provider value={{ color: '#000' }}>
         <Nav>
-          <NavIcon to='#' style={{position:'fixed'}}>
+        {/* style={{position:'fixed'}} */}
+          <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
         </Nav>
