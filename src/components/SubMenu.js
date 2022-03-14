@@ -63,7 +63,7 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink smooth to={item.path} key={index}>
+            <DropdownLink className="hover:bg-gray-200" smooth to={item.path} key={index}>
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>
