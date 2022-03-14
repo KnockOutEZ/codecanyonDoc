@@ -1,6 +1,10 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Frontend = () => {
+    AOS.init();
     return ( 
-        <div>
+        <div data-aos="fade-up">
             <h2 className="text-center my-10">Frontend (Alumni Website)</h2>
 
             <div>

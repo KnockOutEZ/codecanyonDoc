@@ -1,8 +1,11 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const About = () => {
+  AOS.init();
   return (
-    <div className="md:grid grid-cols-2">
+    <div data-aos="fade-up" className="md:grid grid-cols-2 mt-10">
       <div id="techs">
       <div className="text-center">
       <h2 className="text-center my-5 text-md">Technologies Used</h2>

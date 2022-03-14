@@ -1,6 +1,10 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Backend = () => {
+    AOS.init();
     return ( 
-        <div>
+        <div data-aos="fade-up">
             <h2 className="text-center my-10">Backend (Admin Panel)</h2>
 
             <div>
