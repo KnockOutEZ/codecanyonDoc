@@ -224,5 +224,5 @@ export const SidebarData = [
             cName: 'sub-nav'
           },
     ]
-  },
+  }
 ];

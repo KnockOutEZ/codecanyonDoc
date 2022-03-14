@@ -73,3 +73,8 @@ body{
   .hidden{
     display:none !important;
   }
+
+  .active{
+    border-left: 4px solid #632ce4;
+    cursor: pointer;
+  }

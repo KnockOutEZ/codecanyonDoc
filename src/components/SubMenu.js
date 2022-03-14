@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
+import "../App.css"
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled(NavLink)`
   display: flex;
   color:black;
   justify-content: space-between;
@@ -45,7 +47,7 @@ const SubMenu = ({ item }) => {
 
   return (
     <>
-      <SidebarLink smooth to={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink activeClassName="active" className="hover:bg-gray-200" smooth to={item.path} onClick={item.subNav && showSubnav}>
         <div className='flex'>
           {/* {item.icon} */}
           <SidebarLabel>{item.title}</SidebarLabel>
