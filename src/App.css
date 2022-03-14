@@ -70,11 +70,18 @@ body{
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   }
 
-  .hidden{
-    display:none !important;
+  .hidden1{
+    display:none;
   }
 
   .active{
     border-left: 4px solid #632ce4;
     cursor: pointer;
+  }
+
+  .myBg{
+    background-image: url("../public/bg1.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
   }

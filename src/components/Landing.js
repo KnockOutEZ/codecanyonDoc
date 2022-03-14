@@ -15,7 +15,7 @@ const Landing = () => {
     return ( 
         <div>
             <Routes><Route exact path="/" element={<Main/>}></Route></Routes>
-      <div className={`${location.pathname  === "/" ? "hidden" : ""} md:flex flex-col md:flex-row md:min-h-screen w-full `}>
+      <div className={`${location.pathname  === "/" ? "hidden1" : ""} md:flex flex-col md:flex-row md:min-h-screen w-full `}>
       <Navbar className={``}/>
     <div className='content container'>
     <Routes>
