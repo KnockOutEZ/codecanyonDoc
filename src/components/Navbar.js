@@ -44,6 +44,16 @@ const SidebarWrap = styled.div`
 `;
 
 const Navbar = () => {
+  const navbar = document.querySelector('.nav-fixed');
+window.onscroll = () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('nav-active');
+    } else {
+        navbar.classList.remove('nav-active');
+    }
+};
+
+
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -51,12 +61,23 @@ const Navbar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: '#000' }}>
+        <div className='sticky top-0 shadow-md md:hidden block'>
+        <Nav className='w-full'>
+        {/* style={{position:'fixed'}} */}
+          <NavIcon to='#'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </NavIcon>
+        </Nav>
+        </div>
+        
+        <div className='md:fixed nav-fixed w-full md:block hidden'>
         <Nav>
         {/* style={{position:'fixed'}} */}
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
         </Nav>
+        </div>
         <SidebarNav sidebar={sidebar} style={{overflowY:"auto"}}>
           <SidebarWrap>
             <NavIcon to='#'>

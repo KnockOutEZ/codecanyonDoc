@@ -85,3 +85,13 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
   }
+
+  .nav-fixed {
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.nav-active {
+    background-color:#fff;
+    box-shadow: 5px -1px 12px -5px rgb(78, 78, 78);
+}

@@ -17,7 +17,7 @@ const Landing = () => {
             <Routes><Route exact path="/" element={<Main/>}></Route></Routes>
       <div className={`${location.pathname  === "/" ? "hidden1" : ""} md:flex flex-col md:flex-row md:min-h-screen w-full `}>
       <Navbar className={``}/>
-    <div className='content container'>
+    <div className='content container mt-10'>
     <Routes>
       <Route exact path="/frontend" element={<Frontend/>}></Route>
       <Route exact path="/installation" element={<Installation/>}></Route>
