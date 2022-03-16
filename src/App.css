@@ -9,13 +9,15 @@ body{
   }
 
   .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
     margin-right: auto;
     margin-left: auto;
   }
   @media (min-width: 768px) {
     .container {
+      padding-right: 15px;
+    padding-left: 15px;
       max-width: 750px;
       width:70% !important
     }

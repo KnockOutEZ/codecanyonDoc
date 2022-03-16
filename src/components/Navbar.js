@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,forwardRef, useRef, useImperativeHandle  } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
@@ -41,15 +41,15 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const Navbar = () => {
-  const navbar = document.querySelector(".nav-fixed");
-  window.onscroll = () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("nav-active");
-    } else {
-      navbar.classList.remove("nav-active");
-    }
-  };
+const Navbar =forwardRef((props, ref) => {
+  // const navbar = document.querySelector(".nav-fixed");
+  // window.onscroll = () => {
+  //   if (window.scrollY > 50) {
+  //     navbar.classList.add("nav-active");
+  //   } else {
+  //     navbar.classList.remove("nav-active");
+  //   }
+  // };
 
   const [sidebar, setSidebar] = useState(true);
 
@@ -57,8 +57,16 @@ const Navbar = () => {
     setSidebar(!sidebar)
   };
 
+  useImperativeHandle(ref, () => ({
+
+    getAlert() {
+      setSidebar(false)
+    }
+
+  }));
+
   function conditionCheck() {
-    let x = window.innerWidth <= 700;
+    let x = window.innerWidth <= 768;
     if (!x) {
       setSidebar(true);
     } else {
@@ -74,7 +82,7 @@ const Navbar = () => {
     <>
       <IconContext.Provider value={{ color: "#000" }}>
         <div className="md:hidden block">
-          <Nav className="w-full">
+          <Nav className="max-w-sm">
             {/* style={{position:'fixed'}} */}
              <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
@@ -102,6 +110,6 @@ const Navbar = () => {
       </IconContext.Provider>
     </>
   );
-};
+});
 
 export default Navbar;
