@@ -11,7 +11,6 @@ const Nav = styled.div`
   background: #fff;
   height: 80px;
   display: flex;
-  margin-right: 100px;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -31,7 +30,6 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
   border-right: 1px solid #dbdbdb;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
@@ -52,8 +50,6 @@ const Navbar = () => {
       navbar.classList.remove("nav-active");
     }
   };
-
-  const tst = () => console.log("sasd")
 
   const [sidebar, setSidebar] = useState(true);
 
@@ -77,7 +73,7 @@ const Navbar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#000" }}>
-        <div className="sticky top-0 shadow-md md:hidden block">
+        <div className="md:hidden block">
           <Nav className="w-full">
             {/* style={{position:'fixed'}} */}
              <NavIcon to='#'>
@@ -85,8 +81,8 @@ const Navbar = () => {
           </NavIcon>
           </Nav>
         </div>
-        <SidebarNav onClick={showSidebar} sidebar={sidebar} style={{ overflowY: "auto" }}>
-          <SidebarWrap onClick={e => e.stopPropagation()}>
+        <SidebarNav className="md:sticky fixed" sidebar={sidebar} style={{ overflowY: "auto" }}>
+          <SidebarWrap >
             {/* <NavIcon to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon> */}
