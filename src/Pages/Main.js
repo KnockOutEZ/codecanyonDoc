@@ -1,4 +1,5 @@
 import FancyButton from "../components/FancyButton.js"
+import Slide from 'react-reveal/Slide';
 
 const Main = () => {
     let props = {
