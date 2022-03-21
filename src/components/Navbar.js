@@ -85,7 +85,8 @@ const Navbar =forwardRef((props, ref) => {
           <Nav className="max-w-sm">
             {/* style={{position:'fixed'}} */}
              <NavIcon to='#'>
-            <FaIcons.FaBars onClick={showSidebar} />
+             <i class="fa-solid fa-burger"  onClick={showSidebar}></i>
+            {/* <FaIcons.FaBars onClick={showSidebar} /> */}
           </NavIcon>
           </Nav>
         </div>
@@ -93,7 +94,8 @@ const Navbar =forwardRef((props, ref) => {
           <SidebarWrap >
             <div className="md:hidden block absolute top-0 right-0 mr-5">
             <NavIcon  to='#'>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
+            <i class="fa-solid fa-xmark" onClick={showSidebar}></i>
+              {/* <AiIcons.AiOutlineClose onClick={showSidebar} /> */}
             </NavIcon>
             </div>
             <div className="w-full flex h-48 justify-center items-center text-center border-b-2 mb-5">
