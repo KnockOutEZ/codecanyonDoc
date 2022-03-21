@@ -25,7 +25,7 @@ const Main = () => {
                 <div className="mx-auto flex-col flex items-center justify-center h-screen">
                     <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10 text-center">
                         <h8 className="mx-auto text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black md:leading-tight">
-                        <h9 style={{color:"#E619A3"}} className="">Venus </h9> <br/> <h9 className="text-gray-300">Alumni Association</h9>
+                        <h9 style={{color:"white"}} className="">Venus</h9> <br/> <h9 className="text-gray-300">Alumni Association</h9>
                         </h8>
                         <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-200 font-normal text-center text-sm sm:text-lg">A professonal website drives sales. Create a beautiful website to impress and engage new customers and establish your business online </p>
                     </div>

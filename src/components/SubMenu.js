@@ -15,7 +15,7 @@ const SidebarLink = styled(NavLink)`
   text-decoration: none;
   font-size: 18px;
   &:hover {
-    border-left: 4px solid #632ce4;
+    border-left: 4px solid #16a086;
     cursor: pointer;
   }
 `;
@@ -60,7 +60,18 @@ const SubMenu = ({ item }) => {
             : null}
         </div>
       </SidebarLink>
-      {subnav &&
+      {/* {subnav &&
+        item.subNav.map((item, index) => {
+          return (
+            <DropdownLink className="hover:bg-gray-200 transition duration-500 ease-in-out" smooth to={item.path} key={index}>
+              {item.icon}
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </DropdownLink>
+          );
+        })} */}
+
+        <div className={`${subnav ? "animation" : "animationHidden"}`}>
+        {
         item.subNav.map((item, index) => {
           return (
             <DropdownLink className="hover:bg-gray-200" smooth to={item.path} key={index}>
@@ -69,6 +80,7 @@ const SubMenu = ({ item }) => {
             </DropdownLink>
           );
         })}
+        </div>
     </>
   );
 };

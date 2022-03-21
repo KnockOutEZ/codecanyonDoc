@@ -7,6 +7,7 @@ import Frontend from "../Pages/Frontend";
 import Backend from "../Pages/Backend";
 import About from "../Pages/About";
 import Navbar from "../components/Navbar";
+import Copyright from "../components/Copyright";
 
 const Landing = () => {
   let location = useLocation()
@@ -26,7 +27,7 @@ const Landing = () => {
       <Route exact path="/backend" element={<Backend/>}></Route>
       <Route exact path="/about" element={<About/>}></Route>        
     </Routes>
-    <div className='text-center'>©Copyright 2020 t1m9m. All rights reserved.</div>
+    <Copyright location = {location.pathname}></Copyright>
     </div>
     </div>
         </div>

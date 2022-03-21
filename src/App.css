@@ -53,6 +53,9 @@ body{
   h2{
     font-size: 28px;
     font-weight: 700;
+    text-decoration:underline;
+    text-underline-position: under;
+    text-underline-offset: 2px;
   }
 
   h1{
@@ -62,7 +65,7 @@ body{
   }
 
   a{
-    color: #fc0f5e;
+    color: #16A086;
     font-weight: 500;
   }
 
@@ -79,7 +82,7 @@ body{
   }
 
   .active{
-    border-left: 4px solid #632ce4;
+    border-left: 4px solid #16a086;
     cursor: pointer;
   }
 
@@ -98,4 +101,13 @@ background-size: cover;
 .nav-active {
     background-color:#fff;
     box-shadow: 5px -1px 12px -5px rgb(78, 78, 78);
+}
+
+.animationHidden{
+  display: none;
+  transition: all 1s ease-in;
+}
+
+.animation{
+  display: block;
 }

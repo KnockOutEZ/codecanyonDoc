@@ -91,13 +91,16 @@ const Navbar =forwardRef((props, ref) => {
         </div>
         <SidebarNav className="md:sticky fixed" sidebar={sidebar} style={{ overflowY: "auto" }}>
           <SidebarWrap >
-            {/* <NavIcon to='#'>
+            <div className="md:hidden block absolute top-0 right-0 mr-5">
+            <NavIcon  to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon> */}
+            </NavIcon>
+            </div>
             <div className="w-full flex h-48 justify-center items-center text-center border-b-2 mb-5">
               <Link
                 to="/"
-                className="text-4xl font-bold text-indigo-700"
+                style={{color:"#16a086"}}
+                className="text-4xl font-bold"
               >
                 Venus
               </Link>

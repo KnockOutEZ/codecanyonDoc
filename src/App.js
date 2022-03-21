@@ -1,9 +1,13 @@
 import './App.css';
 import LandingPage from "./Pages/LandingPage";
+import Copyright from "./components/Copyright";
+import { Fragment } from 'react';
 
 function App() {
   return (
-    <LandingPage/>
+    <Fragment>
+      <LandingPage/>
+    </Fragment>
   );
 }
 
