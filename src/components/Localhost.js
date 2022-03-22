@@ -1,3 +1,5 @@
+import Code from "./Extras/Code"
+
 const Localhost = () => {
     return ( 
         <div id="localhost">

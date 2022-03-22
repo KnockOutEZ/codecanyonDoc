@@ -93,7 +93,7 @@ const Navbar =forwardRef((props, ref) => {
           </Nav>
         </div>
         <div className="customScrollbar">
-        <SidebarNav className="md:sticky fixed" sidebar={sidebar} style={{ overflowY: "auto" }}>
+        <SidebarNav className="md:sticky fixed scroll1" sidebar={sidebar} style={{ overflowY: "auto" }}>
           <SidebarWrap >
             <div className="z-50 absolute top-0 right-0 mr-5">
             <NavIcon  to='#'>

@@ -105,18 +105,38 @@ background-size: cover;
   }
 
   /* /.customScrollbar Chrome, Edge, and Safari .customScrollbar/ */
-  .customScrollbar::-webkit-scrollbar {
+  /* .customScrollbar::-webkit-scrollbar {
     width: 16px;
   }
 
   .customScrollbar::-webkit-scrollbar-track {
     background: #ffffff;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
 
   .customScrollbar::-webkit-scrollbar-thumb {
-    background-color: #16A086;
+    -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+
+  .customScrollbar::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
+  } */
+
+  .scroll1::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  .scroll1::-webkit-scrollbar-track {
+    background: 16A086;
+  }
+   
+  .scroll1::-webkit-scrollbar-thumb {
+    background: #16A086; 
   }
 
 .nav-active {
