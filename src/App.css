@@ -152,3 +152,17 @@ background-size: cover;
 .animation{
   display: block;
 }
+
+.opacityYes{
+  transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s  ease-in-out;
+  opacity: 1;
+}
+
+.opacityNo{
+  transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s  ease-in-out;
+  opacity: 0;
+}

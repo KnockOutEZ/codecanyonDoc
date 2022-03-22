@@ -8,7 +8,9 @@ const Copyright = (props) => {
 
     return ( 
     <>
-    {ReactDOM.createPortal(<div className={`${props.location  === "/" ? "hidden1" : ""} text-center text-white`} style={{backgroundColor:"#16a086"}}>©Copyright 2020 <a style ={{color:"white"}} href="https://t1m9m.com" target="__blank">t1m9m</a>. All rights reserved.</div>,portal)}
+    {/* {ReactDOM.createPortal( */}
+    <div style ={{color:"#16A086"}} className={`${props.location  === "/" ? "hidden1" : ""} text-center`}>©Copyright 2020 <a href="https://t1m9m.com" target="__blank">t1m9m</a>. All rights reserved.</div>
+    {/*,portal)}*/}
     </>
      );
 }

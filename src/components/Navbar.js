@@ -79,6 +79,7 @@ const Navbar =forwardRef((props, ref) => {
   useEffect(() => {
     conditionCheck();
   }, []);
+  
 
   return (
     <>
