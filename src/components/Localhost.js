@@ -1,9 +1,26 @@
 import Code from "./Extras/Code";
+import Video from "./Extras/Video";
+import Img from "./Extras/Img";
 
 const Localhost = () => {
   return (
     <div id="localhost">
+      <Img src={"/bg1.jpg"} className={"any desired class name"} style={{maxWidth:"100%",maxHeight:"100%"}} alt={"an alternate name"}></Img>
 
+      <Video
+        className={"react-player"}
+        url={"https://www.youtube.com/watch?v=ysz5S6PUM-U"}
+        width={"100%"}
+        height={"100%"}
+      ></Video>
+
+
+      <Code
+        text={"My code snippet goes here \n qweqwe"}
+        language={"js"}
+        showLineNumbers={false}
+        startingLineNumber={1}
+      ></Code>
       <h3 className="">1. localhost</h3>
       <br />
       <br />
