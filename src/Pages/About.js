@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 const About = () => {
   AOS.init();
   return (
-    <div data-aos="fade-up" className="md:grid grid-cols-2 mt-10 md:text-left text-center">
+    <div data-aos="fade-up" className="md:grid grid-cols-2 md:mb-0 mb-20 md:mt-0 mt-10 h-screen m-auto justify-center items-center md:text-left text-center">
       <div id="techs">
       <div className="">
       <h2 style={{textDecoration:"none"}} className=" my-5 text-md">Technologies Used</h2>
@@ -31,7 +31,7 @@ const About = () => {
       </div>
       </div>
 
-      <div className=" md:m-auto mb-5">
+      <div className=" md:m-auto">
           <img src="hero.png"/>
       </div>
 

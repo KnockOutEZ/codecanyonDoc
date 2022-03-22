@@ -1,11 +1,11 @@
-import Code from "./Extras/Code";
-import Video from "./Extras/Video";
-import Img from "./Extras/Img";
+// import Code from "./Extras/Code";
+// import Video from "./Extras/Video";
+// import Img from "./Extras/Img";
 
 const Localhost = () => {
   return (
     <div id="localhost">
-      <Img src={"/bg1.jpg"} className={"any desired class name"} style={{maxWidth:"100%",maxHeight:"100%"}} alt={"an alternate name"}></Img>
+      {/* <Img src={"/bg1.jpg"} className={"any desired class name"} style={{maxWidth:"100%",maxHeight:"100%"}} alt={"an alternate name"}></Img>
 
       <Video
         className={"react-player"}
@@ -20,7 +20,7 @@ const Localhost = () => {
         language={"js"}
         showLineNumbers={false}
         startingLineNumber={1}
-      ></Code>
+      ></Code> */}
       <h3 className="">1. localhost</h3>
       <br />
       <br />
