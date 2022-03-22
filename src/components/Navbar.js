@@ -7,6 +7,7 @@ import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import Planet from "./PlanetDesign/Planet";
 import { IconContext } from "react-icons/lib";
+import { Scrollbars } from 'react-custom-scrollbars';
 
 const Nav = styled.div`
   background: #fff;
@@ -91,25 +92,27 @@ const Navbar =forwardRef((props, ref) => {
           </NavIcon>
           </Nav>
         </div>
+        <div className="customScrollbar">
         <SidebarNav className="md:sticky fixed" sidebar={sidebar} style={{ overflowY: "auto" }}>
           <SidebarWrap >
-            <div className="md:hidden block absolute top-0 right-0 mr-5">
+            <div className="z-50 absolute top-0 right-0 mr-5">
             <NavIcon  to='#'>
-            <i class="fa-solid fa-xmark" onClick={showSidebar}></i>
+            <i class="fa-solid fa-xmark md:hidden block" onClick={showSidebar}></i>
               {/* <AiIcons.AiOutlineClose onClick={showSidebar} /> */}
             </NavIcon>
             </div>
-              <Link
+              <Link className="z-10"
                 to="/"
                 style={{color:"#16a086"}}
               >
                 <Planet></Planet>
               </Link>
             {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} track={index} />;
+              return <SubMenu condition = {conditionCheck} item={item} key={index} track={index} />;
             })}
           </SidebarWrap>
         </SidebarNav>
+        </div>
       </IconContext.Provider>
     </>
   );

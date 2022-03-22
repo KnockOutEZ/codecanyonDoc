@@ -97,6 +97,27 @@ background-size: cover;
     transition: 0.3s ease-in-out;
     background-color: transparent;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .customScrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #16A086 #ffffff;
+  }
+
+  /* /.customScrollbar Chrome, Edge, and Safari .customScrollbar/ */
+  .customScrollbar::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  .customScrollbar::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  .customScrollbar::-webkit-scrollbar-thumb {
+    background-color: #16A086;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 
 .nav-active {
     background-color:#fff;
