@@ -5,6 +5,7 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
+import Planet from "./PlanetDesign/Planet";
 import { IconContext } from "react-icons/lib";
 
 const Nav = styled.div`
@@ -98,17 +99,14 @@ const Navbar =forwardRef((props, ref) => {
               {/* <AiIcons.AiOutlineClose onClick={showSidebar} /> */}
             </NavIcon>
             </div>
-            <div className="w-full flex h-48 justify-center items-center text-center border-b-2 mb-5">
               <Link
                 to="/"
                 style={{color:"#16a086"}}
-                className="text-4xl font-bold"
               >
-                Venus
+                <Planet></Planet>
               </Link>
-            </div>
             {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
+              return <SubMenu item={item} key={index} track={index} />;
             })}
           </SidebarWrap>
         </SidebarNav>

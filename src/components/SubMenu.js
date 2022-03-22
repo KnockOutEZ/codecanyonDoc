@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink,useLocation } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import "../App.css"
@@ -43,7 +43,9 @@ const DropdownLink = styled(Link)`
 const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
 
-  const showSubnav = () => setSubnav(!subnav);
+  const showSubnav = () => {setSubnav(!subnav)};
+
+  let location = useLocation();
 
   return (
     <>
@@ -74,7 +76,8 @@ const SubMenu = ({ item }) => {
         {
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink className="hover:bg-gray-200" smooth to={item.path} key={index}>
+            // className="hover:bg-gray-200"
+            <DropdownLink className={`${location.pathname}${location.hash}` === item.path ? "bg-gray-200" : "hover:bg-gray-200"} smooth to={item.path} key={index}>
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>
